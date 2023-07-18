@@ -1,0 +1,71 @@
+﻿<Window x:Class="CivilizationVIModTranslationHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CivilizationVIModTranslationHelper"
+        mc:Ignorable="d"
+        Title="Civilization VI Mod Translation Helper" Height="400" Width="800" MinWidth="1000" MinHeight="500" WindowStartupLocation="CenterScreen" Background="#B2FFFFFF">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="textBoxLeft" TextChanged="textBoxLeft_TextChanged" Background="#7FFFFFFF" SelectionBrush="#7F0078D7" BorderBrush="#7F000000" Foreground="#E5000000" Padding="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Text="" UndoLimit="100" MaxLines="1000" AcceptsReturn="True" HorizontalContentAlignment="Left" FontSize="14" Grid.Row="0" Grid.Column="0" MinWidth="200" MinHeight="300" Margin="30" />
+        <TextBox x:Name="textBoxRight" TextChanged="textBoxRight_TextChanged" Background="#7FFFFFFF" SelectionBrush="#7F0078D7" BorderBrush="#7F000000" Foreground="#E5000000" Padding="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Text="" UndoLimit="100" MaxLines="1000" AcceptsReturn="True" HorizontalContentAlignment="Left" FontSize="14" Grid.Row="0" Grid.Column="1" MinWidth="200" MinHeight="300" Margin="30" />
+
+
+
+
+
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="textBoxInfo" IsReadOnly="True" IsReadOnlyCaretVisible="False" Background="#7FFFFFFF" SelectionBrush="#7F0078D7" BorderBrush="#7F000000" Foreground="#E5000000" Padding="0" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" Text="" MaxLines="1000" HorizontalContentAlignment="Left" FontSize="16" Grid.Row="0" Grid.Column="0" MinHeight="100" Margin="20,30,20,7" />
+
+            <!--<Grid Grid.Row="1" Width="200" Margin="1,0">
+                <TextBox x:Name="textBoxFilenameIn" Background="#59FFFFFF" SelectionBrush="#7F0078D7" BorderBrush="#7F000000" Foreground="#99000000" Padding="0,-3,0,0" VerticalScrollBarVisibility="Disabled" Margin="35,3" MaxLines="1" Text="file name" UndoLimit="10" MinWidth="20" MaxWidth="200" HorizontalContentAlignment="Center" FontSize="16"/>
+                <Button Width="22" Height="22" BorderBrush="#7F000000" Background="#59F4FF83" Padding="0,-4,0,0" Cursor="Hand" BorderThickness="1" 
+                                     FontSize="18" VerticalContentAlignment="Center" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"  HorizontalContentAlignment="Center" Margin="1,3" HorizontalAlignment="Left" Visibility="Hidden" />
+
+                <Button x:Name="ExportFromShikiButton" Style="{StaticResource ButtonStyle1}" Margin="1,3" Width="22" Height="22" BorderBrush="#7F000000" Background="#598CCAFF" Padding="0,-4,0,0" Cursor="Hand" BorderThickness="1"
+                                    Content="↸" FontSize="18" VerticalContentAlignment="Center" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" ToolTip="Экспортировать список с шикимори. Цвет напоминает о том, что список этого юзера ещё не экспортирован." Click="ExportFromShikiButton_Click" HorizontalAlignment="Right" >
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+
+            </Grid>-->
+
+
+            <Button Content="Choose XML" BorderBrush="{x:Null}" Background="#59000000" Padding="1" BorderThickness="0" Grid.Row="1" FontSize="32" UseLayoutRounding="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Mistral" Cursor="Hand" Click="ButtonChooseFileClick" Foreground="#FF898989" Margin="20,7" />
+            <Button Content="Replace" BorderBrush="{x:Null}" Background="#59000000" Padding="1" BorderThickness="0" Grid.Row="3" FontSize="32" UseLayoutRounding="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Mistral" Cursor="Hand" Click="ButtonReplaceClick" Foreground="#FF898989" Margin="20,7" />
+            <Button Content="Add" BorderBrush="{x:Null}" Background="#59000000" Padding="1" BorderThickness="0" Grid.Row="2" FontSize="32" UseLayoutRounding="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Mistral" Cursor="Hand" Click="ButtonAddClick" Foreground="#FF898989" Margin="20,7" />
+
+
+
+
+
+        </Grid>
+
+
+
+
+
+
+    </Grid>
+</Window>
